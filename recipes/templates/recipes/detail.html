@@ -1,0 +1,43 @@
+{% extends 'recipes/base.html' %}
+
+{% block head %}
+    {% load static %}
+    <title>{{ recipe.title }} | 12Bakers</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'recipes/detail.css' %}" />
+{% endblock %}
+{% block body %}
+    <section id="title">
+        <h2>{{ recipe.title }}</h2>
+        <p>{{ recipe.description }}</p>
+        <img src="http://127.0.0.1:8000/recipes/media/{{ recipe.thumbnail.name }}">
+    </section>
+    <div class="main">
+        <p id="creator">By Baker <b>{{ recipe.user }}</b></p>
+        <hr>
+        <section id="information">
+            <ul>
+                <li><h4><span class="highlight">SERVES</span> {{ recipe.servings }}</h4></li>
+                <li><h4><span class="highlight">COOKING TIME</span> {{ recipe.get_time }}</h4></li>
+                <li><h4><span class="highlight">DIFFICULTY</span> {{ recipe.difficulty }}</h4></li>
+            </ul>
+        </section>
+        <hr>
+        <section id="ingredient">
+            <h3>Ingredients</h3>
+            <ul>
+            {% for ingredient in recipe.ingredients_as_list %}
+                <li>{{ ingredient }}</li>
+            {% endfor %}
+            </ul>
+        </section>
+
+        <section id="method">
+            <h3>Method</h3>
+            <ol>
+            {% for method in recipe.methods_as_list %}
+                <li>{{ method }}</li>
+            {% endfor %}
+            </ol>
+        </section>
+    </div>
+{% endblock %}

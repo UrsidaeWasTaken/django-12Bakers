@@ -1,0 +1,44 @@
+body {
+    background: white url("images/background.jpg");
+}
+
+h2 {
+    margin-top: 0;
+    color: #92A3C2;
+}
+
+.form {
+    position: relative;
+    background: #FFFFFF;
+    min-width: 200px;
+    max-width: 500px;
+    margin: 0 auto 100px;
+    padding: 30px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    text-align: center;
+}
+
+.form input, .description, .instructions, .ingredients, .difficulty {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    resize: none;
+}
+
+.form .button {
+    background: #8898B5;
+    width: 100%;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}

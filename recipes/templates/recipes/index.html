@@ -1,0 +1,24 @@
+{% extends 'recipes/base.html' %}
+
+{% block head %}
+    {% load static %}
+    <title>Recipes | 12Bakers</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'recipes/index.css' %}" />
+{% endblock %}
+{% block body %}
+    {% if all_recipes %}
+        <br><div class="container">
+            <ul>
+                {% for recipe in all_recipes %}
+                <li><a href="{% url 'recipes:detail' recipe.id recipe.slug %}">
+                    <img src="http://127.0.0.1:8000/recipes/media/{{ recipe.thumbnail.name }}">
+                    <h3>{{ recipe.title }}</h3>
+                    <p>{{ recipe.description|truncatechars:200 }}</p>
+                </a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        <h3>Sorry, there are no recipes available</h3>
+    {% endif %}
+{% endblock %}

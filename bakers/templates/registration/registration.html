@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'registration/registration.css' %}" />
+    <title>Sign Up | 12Bakers</title>
+</head>
+<body>
+    <div class="form">
+        <h2><span>12</span>Bakers</h2><hr><br>
+        <form class="signup-form" method="POST" action="{% url 'registration' %}">
+            {% csrf_token %}
+            {% for field in form %}
+                {{ field.label_tag }}<br>
+                {{ field }}
+
+                {% for error in field.errors %}
+                    <p class="error">{{ error }}</p>
+                {% endfor %}
+            {% endfor %}
+            <input class="button" type="submit" value="Register">
+            <p class="message">Already registered? <a href="{% url 'login' %}">Login</a></p>
+        </form>
+    </div>
+</body>
+</html>
