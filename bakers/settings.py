@@ -83,9 +83,9 @@ WSGI_APPLICATION = 'bakers.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '12bakers',
-        'USER': 'useradmin',
-        'PASSWORD': 'webadm1n',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
