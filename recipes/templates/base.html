@@ -28,8 +28,8 @@
                         <li><a href="#">About</a></li>
                         {% if user.is_authenticated %}
                             <li><a href="{% url 'recipes:create' %}">Create</a></li>
-                            <li><a href="{% url 'users:profile' user.username %}">My Profile</a></li>
-                            <li id="login"><a href="{% url 'logout' %}">{{ user }} | Logout</a></li>
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                            <li id="login"><a href="{% url 'users:profile' user.username %}">{{ user }}</a></li>
                         {% else %}
                             <li id="login"><a href="{% url 'login' %}">Login/Signup</a></li>
                         {% endif %}
