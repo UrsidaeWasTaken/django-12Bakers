@@ -7,6 +7,7 @@ html, body {
 body {
       font-family: "Helvetica Neue",sans-serif;
       font-weight: lighter;
+      background-color: white;
 }
 
 header {
@@ -16,7 +17,7 @@ header {
 
 .content {
       width: 100%;
-      margin: 3.65em auto;
+      margin: 3.6em auto;
       font-size: 20px;
       line-height: 30px;
       text-align: justify;

@@ -5,16 +5,10 @@ from django.urls import path
 from . import views
 
 
-app_name = 'recipes'
+app_name = 'users'
 urlpatterns = [
-    # /recipes/
-    path('', views.RecipeIndexView.as_view(), name='index'),
-
-    # /recipes/<pk>/<slug>
-    path('<pk>/<slug:slug>', views.RecipeDetailView.as_view(), name='detail'),
-
-    # /recipes/create/
-    path('create/', views.RecipeCreate.as_view(), name='create'),
+    # /baker/<username>
+    path('<slug>/', views.UserDetailView.as_view(), name='profile'),
 ]
 
 if settings.DEBUG:

@@ -25,7 +25,7 @@ class RecipeDetailView(DetailView):
 
 class RecipeCreate(CreateView):
     form_class = RecipeForm
-    template_name = 'recipes/recipes_form.html'
+    template_name = 'forms/recipes_form.html'
 
     def dispatch(self, *args, **kwargs):
         if not self.request.user.is_authenticated:

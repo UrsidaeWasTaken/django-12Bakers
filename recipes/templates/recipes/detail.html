@@ -1,4 +1,4 @@
-{% extends 'recipes/base.html' %}
+{% extends 'base.html' %}
 
 {% block head %}
     {% load static %}
@@ -9,7 +9,7 @@
     <section id="title">
         <h2>{{ recipe.title }}</h2>
         <p>{{ recipe.description }}</p>
-        <img src="http://127.0.0.1:8000/recipes/media/{{ recipe.thumbnail.name }}">
+        <img src="http://127.0.0.1:8000/recipes/media/recipes/{{ recipe.thumbnail.name }}">
     </section>
     <div class="main">
         <p id="creator">By Baker <b>{{ recipe.user }}</b></p>

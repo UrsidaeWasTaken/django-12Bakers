@@ -1,4 +1,4 @@
-{% extends 'recipes/base.html' %}
+{% extends 'base.html' %}
 
 {% block head %}
     {% load static %}
@@ -11,7 +11,7 @@
             <ul>
                 {% for recipe in all_recipes %}
                 <li><a href="{% url 'recipes:detail' recipe.id recipe.slug %}">
-                    <img src="http://127.0.0.1:8000/recipes/media/{{ recipe.thumbnail.name }}">
+                    <img src="http://127.0.0.1:8000/recipes/media/recipes/{{ recipe.thumbnail.name }}">
                     <h3>{{ recipe.title }}</h3>
                     <p>{{ recipe.description|truncatechars:200 }}</p>
                 </a></li>

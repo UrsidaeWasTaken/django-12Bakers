@@ -1,0 +1,29 @@
+#profile-picture {
+    display: block;
+    margin: 5em auto 1em auto;
+    object-fit: contain;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#location-icon {
+    display: block;
+    margin: 3.5% auto;
+    float: left;
+    object-fit: contain;
+    max-width: 15px;
+    max-height: 15px;
+}
+
+#location-name {
+    font-weight: bold;
+    margin: 1em auto 2em auto;
+}
+
+#username, #bio, #location-name {
+    text-align: center
+}
+
+.bio-container {
+    margin: 0 30%;
+}

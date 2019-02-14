@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Apps
-    'recipes.apps.RecipesConfig',
+    'recipes',
     'bakers',
+    'users',
 
     # Extensions
     'taggit',
@@ -137,5 +138,3 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
-print(MEDIA_ROOT)

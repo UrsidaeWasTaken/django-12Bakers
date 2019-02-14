@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {% load static %}
+    <title>Baker {{ baker.user }} | 12Bakers</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'profiles/profile.css' %}" />
+{% endblock %}
+{% block body %}
+    <div class="content">
+        <img id="profile-picture" src="http://127.0.0.1:8000/baker/media/profiles/{{ baker.profile.name }}">
+        <h2 id="username">{{ baker.user }}</h2>
+        <div class="location-container">
+            <p id="location-name">{{ baker.location }}</p>
+        </div>
+        <div class="bio-container">
+            <p id="bio">{{ baker.bio }}</p>
+        </div>
+        <hr><br>
+    </div>
+{% endblock %}

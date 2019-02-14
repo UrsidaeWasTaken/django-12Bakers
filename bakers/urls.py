@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include, reverse_lazy
 from django.contrib.auth.views import LoginView, LogoutView
+from recipes.views import RecipeIndexView
 from . import views
 
 app_name = 'bakers'
@@ -24,6 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # /recipes/
     path('recipes/', include('recipes.urls')),
+    path('', RecipeIndexView.as_view()),
+    # /users/
+    path('baker/', include('users.urls')),
     # /login/
     path('login/', LoginView.as_view(), name='login'),
     # /logout/

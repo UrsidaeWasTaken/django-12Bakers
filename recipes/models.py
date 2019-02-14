@@ -4,12 +4,11 @@ from django.utils.text import slugify
 from django.contrib.auth.models import User
 
 
-# Create your models here.
 class Recipe(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, blank=True)
-    thumbnail = models.ImageField(upload_to='', default='no_image.png')
+    thumbnail = models.ImageField(upload_to='recipes', default='no_image.png')
     description = models.TextField(max_length=300, null=True, blank=True)
     ingredients = models.TextField(max_length=1500, null=True)
     instructions = models.TextField(max_length=1800, null=True)
