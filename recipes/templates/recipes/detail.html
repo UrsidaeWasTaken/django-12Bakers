@@ -12,7 +12,7 @@
         <img src="http://127.0.0.1:8000/recipes/media/recipes/{{ recipe.thumbnail.name }}">
     </section>
     <div class="main">
-        <p id="creator">By Baker <b>{{ recipe.user }}</b></p>
+        <p id="creator">By Baker <a href="{% url 'users:profile' recipe.user %}"><b>{{ recipe.user }}</b></a></p>
         <hr>
         <section id="information">
             <ul>
